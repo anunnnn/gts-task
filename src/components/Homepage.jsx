@@ -1,7 +1,10 @@
 import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
+
 import Card from './Card';
+import CartPageApp from './CartPageApp';
 
 export default function Homepage() {
   return (
@@ -11,8 +14,7 @@ export default function Homepage() {
             
             <Nav className="me-auto">
                 <Nav.Link href="#home"> Home </Nav.Link>
-                <Nav.Link href="#features"> Cart </Nav.Link>
-                <Nav.Link href="#pricing"> Pricing </Nav.Link>
+                <Nav.Link as = {Link} to = './CartPageApps'> Cart </Nav.Link>
             </Nav>
 
         </Navbar>
@@ -30,3 +32,12 @@ export default function Homepage() {
 
 // Tasks 
 // 1. Create a navbarcomponent
+
+// import { Link } from 'react-router-dom';
+
+// <Nav.Link as={Link} to="/cart">Cart</Nav.Link>
+
+// import CartPage from './CartPage';
+
+// <Route path="/cart" element={<CartPage />} />
+
